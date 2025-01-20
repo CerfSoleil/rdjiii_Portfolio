@@ -1,0 +1,25 @@
+.photography-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .photo-tile {
+    width: 200px;
+    height: 150px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  
+  .photo-tile:hover {
+    box-shadow: 0 0 10px #333;
+    transform: scale(1.05);
+  }
+  

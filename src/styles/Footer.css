@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #333;
+  }
+  
+  .footer-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: box-shadow 0.3s, color 0.3s;
+  }
+  
+  .footer-icon:hover {
+    color: #f0f0f0;
+    box-shadow: 0 0 10px #f0f0f0;
+  }
+  
+  .footer-icon i {
+    pointer-events: none; /* Prevent clicking on the icon itself */
+  }
+  

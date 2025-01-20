@@ -1,0 +1,24 @@
+.coding-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .coding-tile {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  
+  .coding-tile:hover {
+    border-color: #333;
+    box-shadow: 0 0 10px #333;
+  }
+  
