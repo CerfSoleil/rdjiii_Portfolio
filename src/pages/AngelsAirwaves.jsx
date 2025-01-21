@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/AngelsAirwaves.css";
+import "../styles/PortfolioGallery.css";
 
 const images = [
   { title: "Image 1", src: "/images/angels-airwaves1.jpg", description: "Description of image 1" },
@@ -21,7 +21,7 @@ const AngelsAirwaves = () => {
   };
 
   return (
-    <div className="angels-airwaves">
+    <div className="portfolio-gallery">
       <h1>Angels & Airwaves Collection</h1>
       <div className="image-gallery">
         {images.map((image, index) => (
