@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/SunsetCement.css";
+import "../styles/PortfolioGallery.css";
 
 const images = [
   { title: "Image 1", src: "/images/IMG_3538.jpg", description: "Description of image 1" },
@@ -21,7 +21,7 @@ const SunsetCement = () => {
   };
 
   return (
-    <div className="sunset-cement">
+    <div className="portfolio-gallery">
       <h1>Sunset on Cement Collection</h1>
       <div className="image-gallery">
         {images.map((image, index) => (
