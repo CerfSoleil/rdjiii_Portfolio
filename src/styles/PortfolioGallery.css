@@ -104,6 +104,7 @@
   }
   
   .image-info p {
+    white-space: pre-line;
     font-size: 16px;
     margin-bottom: 20px;
   }
