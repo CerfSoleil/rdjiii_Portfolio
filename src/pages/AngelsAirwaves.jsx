@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "../styles/PortfolioGallery.css";
 
 const images = [
-  { title: "Image 1", src: "/images/angels-airwaves1.jpg", description: "Description of image 1" },
-  { title: "Image 2", src: "/images/angels-airwaves2.jpg", description: "Description of image 2" },
-  { title: "Image 3", src: "/images/angels-airwaves3.jpg", description: "Description of image 3" },
-  { title: "Image 4", src: "/images/angels-airwaves4.jpg", description: "Description of image 4" },
-  { title: "Image 5", src: "/images/angels-airwaves5.jpg", description: "Description of image 5" },
+  { title: "Throne", src: "/images/photography_galleries/angels-airwaves/IMG_3521 Throne.png", description: "Description of image 2" },
+  { title: "Seraphim", src: "/images/photography_galleries/angels-airwaves/IMG_3535 Seraphim.png", description: "Description of image 2" },
+  { title: "Behind the Gates", src: "/images/photography_galleries/angels-airwaves/IMG_3579 Behind the Gates.png", description: "Description of image 2" },
+  { title: "Powers", src: "/images/photography_galleries/angels-airwaves/IMG_3598 Powers.png", description: "Description of image 2" },
+  { title: "Cherubim", src: "/images/photography_galleries/angels-airwaves/IMG_3714 Cherubim.png", description: "Description of image 2" },
+  { title: "Virtue", src: "/images/photography_galleries/angels-airwaves/IMG_3839 Virtue.png", description: "Description of image 2" },
 ];
 
 const AngelsAirwaves = () => {
