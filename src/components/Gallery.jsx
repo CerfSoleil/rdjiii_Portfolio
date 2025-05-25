@@ -17,7 +17,7 @@ const Gallery = ({ title, images }) => {
     <div className="portfolio-gallery">
       <h1>{title}</h1>
       <div className="image-gallery">
-        {images.map((image, index) => (
+        {[...images].reverse().map((image, index) => (
           <div key={index} className="image-tile" onClick={() => openImagePreview(image)}>
             <img src={image.src} alt={image.title} className="gallery-image" />
             <div className="image-title">{image.title}</div>
