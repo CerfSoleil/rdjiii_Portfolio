@@ -1,5 +1,6 @@
-// components/Gallery.jsx
 import React, { useState } from "react";
+
+import GalleryBar from "./FloatingGalleryBar";
 import "../styles/PortfolioGallery.css";
 
 const Gallery = ({ title, images }) => {
@@ -15,6 +16,7 @@ const Gallery = ({ title, images }) => {
 
   return (
     <div className="portfolio-gallery">
+        <GalleryBar />
       <h1>{title}</h1>
       <div className="image-gallery">
         {[...images].reverse().map((image, index) => (

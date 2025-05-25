@@ -21,3 +21,14 @@
     border-bottom: 2px solid white;
   }
   
+  .floating-gallery-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure it stays above content */
+    background-color: #1a1a1a; /* Adjust to your theme */
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #444;
+  }
+  
