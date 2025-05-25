@@ -9,11 +9,19 @@
     width: 200px;
     height: 150px;
     background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: #333;
+    text-shadow:
+    -1px -1px 0 #333, 
+     1px -1px 0 #333,
+    -1px  1px 0 black,
+     1px  1px 0 black;
     border-radius: 8px;
     transition: box-shadow 0.3s, transform 0.3s;
   }

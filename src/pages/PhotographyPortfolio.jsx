@@ -2,8 +2,8 @@ import React from "react";
 import "../styles/PhotographyPortfolio.css";
 
 const collections = [
-  { title: "Angels & Airwaves", imageSrc: "/images/IMG_3538.jpg", path: "/photography/angels-airwaves" },
-  { title: "Sunset on Cement", imageSrc: "/images/sunset-cement1.jpg", path: "/photography/sunset-cement" },
+  { title: "Angels & Airwaves", imageSrc: "/images/photography_galleries/angels-airwaves/IMG_3839%20Virtue.png", path: "/photography/angels-airwaves" },
+  { title: "Sunset on Cement", imageSrc: "/images/photography_galleries/sunsets-cement/IMG_3052%20Backseat%20Burn.jpg", path: "/photography/sunset-cement" },
 ];
 
 const PhotographyPortfolio = () => {
