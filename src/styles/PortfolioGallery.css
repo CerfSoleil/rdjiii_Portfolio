@@ -4,16 +4,32 @@
   }
   
   .image-gallery {
-    display: grid;
+    column-count: 4;
+    column-gap: 16px;
+    margin-top: 20px;
+    max-width: 1200px; /* Constrain entire gallery width */
+    margin-left: auto;
+    margin-right: auto;
+    /* Uncomment the following lines to use CSS Grid instead of columns */
+    /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 20px; */
   }
   
   .image-tile {
-    position: relative;
+    break-inside: avoid;
+    position:relative;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 300px; /* This constrains how wide each image-tile can get */
+    display: inline-block;
     cursor: pointer;
     transition: transform 0.3s;
+    /* Uncomment the following lines to use CSS Grid instead of columns */
+    /* position: relative;
+    cursor: pointer;
+    transition: transform 0.3s; */
   }
   
   .image-tile:hover {
@@ -69,8 +85,10 @@
   }
   
   .expanded-image {
-    width: 500px;
+    max-width: 80vw;
+    max-height: 90vh;
     height: auto;
+    width:auto;
     object-fit: cover;
     border-radius: 8px;
   }
