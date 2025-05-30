@@ -15,10 +15,10 @@ const CodingPortfolio = () => {
           <p className="repo-descript">{repo.description}</p>
           <p>Currently Worked On: {repo.activeDev ? "Yes" : "No"}</p>
           <div className="coding-links">
-            <a href={repo.repo} target="_blank" rel="noopener noreferrer">Repo</a>
+            <a href={repo.repo} target="_blank" rel="noopener noreferrer">Repository</a>
             {" | "}
             {repo.deploy ? (
-              <a href={repo.deploy} target="_blank" rel="noopener noreferrer">Deploy</a>
+              <a href={repo.deploy} target="_blank" rel="noopener noreferrer">Deploy Link</a>
             ) : (
               <span>[App not Currently Deployed]</span>
             )}
