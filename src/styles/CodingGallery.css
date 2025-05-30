@@ -61,6 +61,15 @@
     object-fit: contain;
     border-radius: 6px;
   }
+
+  .modal-video {
+    width: 90%;
+    max-height: 80vh;
+    margin: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
   
   .modal-nav {
     position: absolute;
