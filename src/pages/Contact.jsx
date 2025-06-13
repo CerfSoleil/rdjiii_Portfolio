@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles/Contact.css";
-// Find an API to connect this to.
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -34,33 +33,19 @@ const Contact = () => {
     Object.values(errors).every((error) => error === "") &&
     Object.values(formData).every((field) => field.trim() !== "");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!isFormValid()) return;
-
-    // Send form data to API (example)
-    fetch("https://example.com/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Message sent:", data);
-        alert("Your message has been sent!");
-        setFormData({ name: "", email: "", message: "" });
-        setErrors({ name: "", email: "", message: "" });
-      })
-      .catch((error) => {
-        console.error("Error sending message:", error);
-        alert("There was an error sending your message. Please try again.");
-      });
-  };
-
   return (
     <div className="contact">
       <h1>Contact Me</h1>
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form
+        className="contact-form"
+        action="https://formsubmit.co/2de9c035ddb70e8e478d375674e0872b"
+        method="POST"
+        target="_blank"
+      >
+        <input type="hidden" name="_subject" value={`Business Inquiry from ${formData.name}`} />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
@@ -70,9 +55,11 @@ const Contact = () => {
             value={formData.name}
             onChange={handleChange}
             onBlur={handleBlur}
+            required
           />
           {errors.name && <p className="error">{errors.name}</p>}
         </div>
+
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
@@ -82,9 +69,11 @@ const Contact = () => {
             value={formData.email}
             onChange={handleChange}
             onBlur={handleBlur}
+            required
           />
           {errors.email && <p className="error">{errors.email}</p>}
         </div>
+
         <div className="form-group">
           <label htmlFor="message">Message</label>
           <textarea
@@ -93,9 +82,12 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             onBlur={handleBlur}
+            rows="10"
+            required
           />
           {errors.message && <p className="error">{errors.message}</p>}
         </div>
+
         <button
           type="submit"
           className={`submit-btn ${!isFormValid() ? "disabled" : ""}`}
