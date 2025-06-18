@@ -35,7 +35,7 @@
      1px  1px 0 black;
   border-radius: 8px;
   border: 2px solid #5BACDC;
-  overflow: hidden; /* keeps image + content cropped */
+  overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
@@ -47,7 +47,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  top: 0;   /* half out */
+  top: 0;
   left: 0;
   transform: translate(0, 0);
   pointer-events: none;
@@ -63,21 +63,18 @@
 
 /* Animate glow on hover of the tile */
 .tile-wrapper:hover::before {
-  animation: circlePath 2s linear forwards;
-  opacity: 1;
-}
-
-.tile-wrapper:hover::after {
-  animation: circlePathTrail 2s linear forwards;
+  animation: circlePath 3s linear forwards;
   opacity: 1;
 }
 
 /* Path animation for full wrapper (follows photo-tile border) */
 @keyframes circlePath {
+  /* x, y | -x is left, -y is up*/
   0%   { transform: translate(0, -5px); }
   25%  { transform: translate(195px, -5px); } 
   50%  { transform: translate(195px, 140px); }
-  75%  { transform: translate(-5px, 145px); }
-  100% { transform: translate(-3px, -3px); }
+  75%  { transform: translate(-5px, 145px); opacity: 1;}
+  90% { transform: translate(-3px, -3px); opacity:1; }
+  100% { transform: translate(-3px, -3px); opacity:0; }
 }
   
