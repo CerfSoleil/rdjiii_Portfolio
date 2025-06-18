@@ -23,20 +23,47 @@ const Resume = () => {
       </a>
       <div className="resume-lists">
         <div className="resume-section">
-          <h2>Full-Stack Web Development Student</h2>
+          <h2>Full-Stack Web Development</h2>
           <ul>
-            <li>Tier 1</li>
+            <li><b>Front End</b></li>
             <ul>
-              <li>Tier 2</li>
+              <li>Javascript</li>
               <ul>
-                <li>Tier 3</li>
+                <li>Using JavaScript, and its sister typed language Typescript, as the main coding language to create applications.</li>
+                <li>Using React, Express, and Node.js to create full-stack applications.</li>
               </ul>
+              <li>HTML & CSS</li>
+              <ul>
+                <li>Using HTML and CSS to create responsive and accessible web pages.</li>
+                <li>Creating my own styling without the use of CSS frameworks to ensure a unique and tailored design.</li>
+              </ul>
+            </ul>
+            <li><b>Back End</b></li>
+            <ul>
+              <li>SQL</li>
+              <ul>
+                <li>Using SQL to create, read, update, and delete data in a database.</li>
+                <li>Creating and managing database schemas as well as relationships between tables.</li>
+              </ul>
+              <li>MongoDB</li>
+              <ul>
+                <li>Using MongoDB to store and retrieve data in a NoSQL database.</li>
+                <li>Creating and managing collections and documents.</li>
+                <li>Using compass to maintain and query databases.</li>
+              </ul>
+            </ul>
+            <li><b>Back End</b></li>
+            <ul>
+              <li>Using GitHub to manage code repositories and collaborate with other developers.</li>
+              <li>Creating pull requests and managing branches.</li>
+              <li>Using GitHub Actions to automate workflows and implement CI/CD.</li>
             </ul>
           </ul>
         </div>
         <div className="resume-section">
           <h2>Independent Caregiver</h2>
           <p>Providing 24/7 living assistance for an individual with significant disability.</p>
+          <br></br>
           <ul>
             <li><b>Medical Administration</b></li>
             <ul>
