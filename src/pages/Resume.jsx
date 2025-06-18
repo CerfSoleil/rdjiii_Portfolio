@@ -5,6 +5,15 @@ const Resume = () => {
   return (
     <div className="resume">
       <h1>Resume</h1>
+      <h3>Offers capabilities in Team Management, Creative Direction, Customer Service.</h3>
+      <h4>Technology skills:</h4>
+      <ul>
+        <li>Coding Languages: HTML, JavaScript, CSS, MongoDB, SQL, Node.js, and Express</li>
+        <li>Adobe: Photoshop, Premier, After Effects, and Lightroom</li>
+        <li>Computer hardware assembly and maintenance</li>
+        <li>Digital and Mirrorless Cameras</li>
+      </ul>
+      <hr />
       <a
         href="/placeholder-resume.pdf"
         download="Resume.pdf"
@@ -84,24 +93,37 @@ const Resume = () => {
         <div className="resume-section">
           <h2>Video Editing</h2>
           <ul>
-            <li>Tier 1</li>
+            <li><b>Video Editing</b></li>
             <ul>
-              <li>Tier 2</li>
+              <li>Forming and consistantly updating a skill with Adobe video creation software.</li>
+              <li>Utilizing narritive direction, graphic design while keeping up to date on online culture and digital trends. </li>
               <ul>
-                <li>Tier 3</li>
+                <li>Sourcing royalty-free and creative common assest applicable to the creation of media.</li>
               </ul>
+            </ul>
+            <li><b>Online Marketing</b></li>
+            <ul>
+              <li>Adherence to SEO and video site trends to cultivate reach through search engines and engagement.</li>
+            </ul>
+            <li><b>Client Relationship</b></li>
+            <ul>
+              <li>Communicating with clients to ensure the final product meets their expectations.</li>
+              <li>Understanding client needs and adapting video content accordingly.</li>
             </ul>
           </ul>
         </div>
         <div className="resume-section">
           <h2>Voice Acting</h2>
           <ul>
-            <li>Tier 1</li>
+            <li><b>Project Delivery</b></li>
             <ul>
-              <li>Tier 2</li>
-              <ul>
-                <li>Tier 3</li>
-              </ul>
+              <li>Delivering high-quality audio recordings for various projects to meet client specifications.</li>
+              <li>Maintaining consistant communication with clients to understand their vision and requirements for each project.</li>
+            </ul>
+            <li><b>Vocal Work</b></li>
+            <ul>
+              <li>Serve as a narrator and voice actor with clear and concise delivery.</li>
+              <li>Effectively using articulation, accents, and emotion to deliver content as effectively as possible.</li>
             </ul>
           </ul>
         </div>
