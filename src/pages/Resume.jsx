@@ -52,7 +52,7 @@ const Resume = () => {
                 <li>Using compass to maintain and query databases.</li>
               </ul>
             </ul>
-            <li><b>Back End</b></li>
+            <li><b>GitHub</b></li>
             <ul>
               <li>Using GitHub to manage code repositories and collaborate with other developers.</li>
               <li>Creating pull requests and managing branches.</li>
