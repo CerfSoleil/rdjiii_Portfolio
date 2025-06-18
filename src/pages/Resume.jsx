@@ -14,7 +14,7 @@ const Resume = () => {
       </a>
       <div className="resume-lists">
         <div className="resume-section">
-          <h2>List 1</h2>
+          <h2>Full-Stack Web Development Student</h2>
           <ul>
             <li>Tier 1</li>
             <ul>
@@ -26,7 +26,63 @@ const Resume = () => {
           </ul>
         </div>
         <div className="resume-section">
-          <h2>List 2</h2>
+          <h2>Independent Caregiver</h2>
+          <p>Providing 24/7 living assistance for an individual with significant disability.</p>
+          <ul>
+            <li><b>Medical Administration</b></li>
+            <ul>
+              <li>Interfacing with nurses and doctors</li>
+              <ul>
+                <li>Arranging transport and appointments.</li>
+                <li>Maintaining patient comfort and communicating wishes.</li>
+                <li>Ensuring proper nutrition within dietary restrictions.</li>
+              </ul>
+            </ul>
+          </ul>
+          <ul>
+            <li><b>Financial Manager</b></li>
+            <ul>
+              <li>Responsible for reconciling financial records and ensuring the accuracy of all accounting entries.</li>
+              <li>Managed day-to-day accounts payable and budget forecasting to ensure fiscal responsibility.</li>
+            </ul>
+          </ul>
+          <ul>
+            <li><b>Wellbeing</b></li>
+            <ul>
+              <li>Providing emotional support and companionship.</li>
+              <li>Fostering meaningful day-to-day activities to stimulate continued mental engagement.</li>
+            </ul>
+          </ul>
+        </div>
+        <div className="resume-section">
+          <h2>Manager and Lead</h2>
+          <ul>
+            <li><b>Management</b></li>
+            <ul>
+              <li>Make logistical decisions and relegate tasks evenly for completion of duties in a timely manner.</li>
+              <li>Maintain experience in applicable fields to fill in for missing roles.</li>
+              <ul>
+                <li>Temporarily taking on the applicable job title.</li>
+              </ul>
+            </ul>
+          </ul>
+          <ul>
+            <li><b>Employee Training</b></li>
+            <ul>
+              <li>Maintaining a complete understanding of guidelines and practices.</li>
+              <li>Learning protocol and regulation thoroughly enough to explain them to new and existing employees.</li>
+            </ul>
+          </ul>
+          <ul>
+            <li><b>Conflict Resolution</b></li>
+            <ul>
+              <li>Handle incidents between employees and patrons/customers alike.</li>
+              <li>Handle emergency scenarios with a level head and optimal outcome.</li>
+            </ul>
+          </ul>
+        </div>
+        <div className="resume-section">
+          <h2>Video Editing</h2>
           <ul>
             <li>Tier 1</li>
             <ul>
@@ -38,13 +94,25 @@ const Resume = () => {
           </ul>
         </div>
         <div className="resume-section">
-          <h2>List 3</h2>
+          <h2>Voice Acting</h2>
           <ul>
             <li>Tier 1</li>
             <ul>
               <li>Tier 2</li>
               <ul>
                 <li>Tier 3</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+        <div className="resume-section">
+          <h2>Computer Technician</h2>
+          <ul>
+            <li><b>Fix Undiagnosed Issues</b></li>
+            <ul>
+              <li>Use my knowledge of hardware and software to troubleshoot issues with client systems.</li>
+              <ul>
+                <li>Analyze the best way to handle issues with minimal loss and intrusion to customer data.</li>
               </ul>
             </ul>
           </ul>
