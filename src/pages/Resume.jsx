@@ -25,7 +25,7 @@ const Resume = () => {
         <div className="resume-section">
           <h2>Full-Stack Web Development</h2>
           <ul>
-            <li><b>Front End</b></li>
+            <li><b>FrontEnd</b></li>
             <ul>
               <li>Javascript</li>
               <ul>
@@ -38,7 +38,7 @@ const Resume = () => {
                 <li>Creating my own styling without the use of CSS frameworks to ensure a unique and tailored design.</li>
               </ul>
             </ul>
-            <li><b>Back End</b></li>
+            <li><b>BackEnd</b></li>
             <ul>
               <li>SQL</li>
               <ul>
