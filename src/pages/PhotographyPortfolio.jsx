@@ -10,11 +10,13 @@ const PhotographyPortfolio = () => {
   return (
     <div className="photography-portfolio">
       {collections.map((collections, index) => (
-        <a key={index} href={collections.path} className="photo-tile" style={{ backgroundImage: `url(${collections.imageSrc})` }}>
-          <div className="photo-overlay">
-            <h3 className="photo-title">{collections.title}</h3>
-          </div>
-        </a>
+        <div className="tile-wrapper">
+          <a key={index} href={collections.path} className="photo-tile" style={{ backgroundImage: `url(${collections.imageSrc})` }}>
+            <div className="photo-overlay">
+              <h3 className="photo-title">{collections.title}</h3>
+            </div>
+          </a>
+        </div>
       ))}
     </div>
   );

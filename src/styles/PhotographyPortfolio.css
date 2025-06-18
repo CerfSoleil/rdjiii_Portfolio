@@ -5,29 +5,79 @@
     gap: 20px;
   }
   
-  .photo-tile {
-    width: 200px;
-    height: 150px;
-    background-color: #ccc;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #333;
-    text-shadow:
+  /* Outer wrapper: handles the glow animation */
+.tile-wrapper {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+}
+
+/* Main tile: image + clipping retained */
+.photo-tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-shadow:
     -1px -1px 0 #333, 
      1px -1px 0 #333,
     -1px  1px 0 black,
      1px  1px 0 black;
-    border-radius: 8px;
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  
-  .photo-tile:hover {
-    box-shadow: 0 0 10px #333;
-    transform: scale(1.05);
-  }
+  border-radius: 8px;
+  border: 2px solid #5BACDC;
+  overflow: hidden; /* keeps image + content cropped */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Glowing mote (on wrapper) */
+.tile-wrapper::before,
+.tile-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 0;   /* half out */
+  left: 0;
+  transform: translate(0, 0);
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Main bright mote */
+.tile-wrapper::before {
+  background: #5BACDC;
+  box-shadow: 0 0 10px #5BACDC, 0 0 20px #5BACDC;
+  z-index: 3;
+}
+
+/* Animate glow on hover of the tile */
+.tile-wrapper:hover::before {
+  animation: circlePath 2s linear forwards;
+  opacity: 1;
+}
+
+.tile-wrapper:hover::after {
+  animation: circlePathTrail 2s linear forwards;
+  opacity: 1;
+}
+
+/* Path animation for full wrapper (follows photo-tile border) */
+@keyframes circlePath {
+  0%   { transform: translate(0, -5px); }
+  25%  { transform: translate(195px, -5px); } 
+  50%  { transform: translate(195px, 140px); }
+  75%  { transform: translate(-5px, 145px); }
+  100% { transform: translate(-3px, -3px); }
+}
   
