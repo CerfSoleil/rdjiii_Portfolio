@@ -37,7 +37,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 1002;
+    z-index: 100;
   }
   
   .dot {
@@ -70,9 +70,10 @@
   
   .modal-img {
     max-width: 90%;
-    max-height: 70%;
+    max-height: 80%;
     object-fit: contain;
     border-radius: 6px;
+    z-index: 1000;
   }
 
   .modal-video {
