@@ -1,18 +1,37 @@
 .site-header {
-    background-color: white; /* Dark background */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 20px;
-    border-bottom: 3px solid #444; /* Subtle border for separation */
+  height: 150px;
+  position: relative;
+  background-color: white;
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 0px;
+  border-bottom: 3px solid #444;
+  overflow: hidden;
+  }
+
+  .header-image {
+    position: absolute;
+    top: -650px;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
   }
   
   .header-title {
-    font-size: 2.5rem; /* Adjust for visibility */
-    margin: 0; /* Remove default margin */
+    font-size: 2.5rem;
+    margin: 0;
+    padding-top: 3%;
     transition: color 0.3s ease;
+    position: relative;
+    z-index: 10;
+    -webkit-text-stroke: 1px white;
   }
   
   .header-title:hover {
-    color: #f39c12; /* Highlight color on hover */
+    color: rgb(66, 171, 231);
   }
   
