@@ -85,6 +85,34 @@
     border-radius: 8px;
   }
   
+  .preview-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 48px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 12px 16px;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .preview-arrow:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .preview-arrow.left {
+    left: 20px;
+  }
+  
+  .preview-arrow.right {
+    right: 20px;
+  }
+  
+
   .expanded-image {
     max-width: 80vw;
     max-height: 90vh;
@@ -124,3 +152,34 @@
     background-color: #555;
   }
   
+  /* Animations */
+  /* Slide Animation */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slide-in-left 0.3s ease-out;
+}
+
+.slide-right {
+  animation: slide-in-right 0.3s ease-out;
+}
