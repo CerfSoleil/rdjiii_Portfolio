@@ -7,7 +7,7 @@ const Resume = () => {
       <h1>Resume</h1>
       <h3>Offers capabilities in Team Management, Creative Direction, Customer Service.</h3>
       <h4>Technology skills:</h4>
-      <ul>
+      <ul className="skills-list">
         <li>Coding Languages: HTML, JavaScript, CSS, MongoDB, SQL, Node.js, and Express</li>
         <li>Adobe: Photoshop, Premier, After Effects, and Lightroom</li>
         <li>Computer hardware assembly and maintenance</li>
