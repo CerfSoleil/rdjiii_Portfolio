@@ -34,9 +34,13 @@
     -1px  1px 0 black,
      1px  1px 0 black;
   border-radius: 8px;
-  border: 2px solid #5BACDC;
+  border: 2px solid #A54B33;
   overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.photo-tile h3 {
+  color: white;
 }
 
 /* Glowing mote (on wrapper) */
@@ -56,8 +60,8 @@
 
 /* Main bright mote */
 .tile-wrapper::before {
-  background: #5BACDC;
-  box-shadow: 0 0 10px #5BACDC, 0 0 20px #5BACDC;
+  background: #A54B33;
+  box-shadow: 0 0 10px #A54B33, 0 0 20px #A54B33;
   z-index: 3;
 }
 

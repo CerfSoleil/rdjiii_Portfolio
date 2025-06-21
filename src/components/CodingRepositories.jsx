@@ -17,13 +17,4 @@ export const repositories = [
         video: "",
         images: ["../images/coding_galleries/Wordemon/Wordemon_1.png","../images/coding_galleries/Wordemon/Wordemon_2.png","../images/coding_galleries/Wordemon/Wordemon_3.png"] 
     },
-    { 
-        title: "Project 3", 
-        description: "Description of Project 3", 
-        activeDev: false,
-        repo: "https://github.com",
-        deploy: "",
-        video: "",
-        images: ["",""] 
-    },
   ];
