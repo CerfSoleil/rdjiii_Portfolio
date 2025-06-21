@@ -6,11 +6,16 @@ const CodingGallery = ({ images, video }) => {
   const [current, setCurrent] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const content = video ? [video, ...images] : images;
-  const isVideo = (index) => video && index === 0;
+  const modalContent = video ? [video, ...images] : images;
+  const previewContent = video ? [...images, video] : images;
 
-  const next = () => setCurrent((current + 1) % content.length);
-  const prev = () => setCurrent((current - 1 + content.length) % content.length);
+  const next = () => {
+    setCurrent((prev) => (prev + 1) % modalContent.length);
+  };
+
+  const prev = () => {
+    setCurrent((prev) => (prev - 1 + modalContent.length) % modalContent.length);
+  };
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
@@ -49,17 +54,17 @@ const CodingGallery = ({ images, video }) => {
           onTouchEnd={onTouchEnd}
           style={{ flex: 1 }}
         >
-          {isVideo(current) ? (
+          {isVideoPreview(current) ? (
             <video src={video} width="300" controls muted />
           ) : (
-            <img src={content[current]} alt={`Preview ${current}`} />
+            <img src={previewContent[current]} alt={`Preview ${current}`} />
           )}
         </div>
 
         <button onClick={next}>&gt;</button>
 
         <div className="dots">
-          {content.map((_, i) => (
+          {previewContent.map((_, i) => (
             <span key={i} className={`dot ${i === current ? "active" : ""}`} />
           ))}
         </div>
@@ -67,25 +72,29 @@ const CodingGallery = ({ images, video }) => {
 
       {modalOpen && (
         <div className="gallery-modal">
-          <span className="close" onClick={closeModal}>×</span>
-          <button className="modal-nav left" onClick={prev}>&lt;</button>
-
-          <div
-            onTouchStart={onTouchStart}
-            onTouchMove={onTouchMove}
-            onTouchEnd={onTouchEnd}
-          >
-            {isVideo(current) ? (
-              <video src={video} className="modal-video" controls autoPlay />
-            ) : (
-              <img src={content[current]} alt={`Modal ${current}`} className="modal-img" />
-            )}
-          </div>
+        <span className="close" onClick={closeModal}>×</span>
+        <button className="modal-nav left" onClick={prev}>&lt;</button>
+    
+        <div
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
+          {isVideoModal(current) ? (
+            <video src={video} className="modal-video" controls autoPlay />
+          ) : (
+            <img
+              src={modalContent[current]}
+              alt={`Modal ${current}`}
+              className="modal-img"
+            />
+          )}
+        </div>    
 
           <button className="modal-nav right" onClick={next}>&gt;</button>
 
           <div className="modal-dots">
-            {content.map((_, i) => (
+            {modalContent.map((_, i) => (
               <span
                 key={i}
                 className={`dot ${i === current ? "active" : ""}`}
