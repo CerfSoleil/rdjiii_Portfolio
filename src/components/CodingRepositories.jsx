@@ -5,8 +5,8 @@ export const repositories = [
         activeDev: false,
         repo: "https://github.com/andrewPelfrey/used-car-dealer" ,
         deploy: "",
-        video: "",
-        images: ["",""]
+        video: "../videos/autoscout_showcase.mp4",
+        images: ["../images/coding_galleries/AutoScout/Autoscout_mainpage.png","../images/coding_galleries/AutoScout/Autoscout_searchpage.png","../images/coding_galleries/AutoScout/Autoscout_employeemessagepage.png"]
     },
     { 
         title: "WordéMon", 
@@ -14,7 +14,7 @@ export const repositories = [
         activeDev: false,
         repo: "https://github.com/nolangrossi/Wordemon",
         deploy: "",
-        video: "",
+        video: "../videos/wordemon_showcase.mp4",
         images: ["../images/coding_galleries/Wordemon/Wordemon_1.png","../images/coding_galleries/Wordemon/Wordemon_2.png","../images/coding_galleries/Wordemon/Wordemon_3.png"] 
     },
   ];
