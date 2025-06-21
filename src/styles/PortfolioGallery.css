@@ -47,9 +47,10 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: white;
+    color: #333;
     font-size: 18px;
     font-weight: bold;
+    -webkit-text-stroke: .03rem white;
   }
   
   .image-preview {
