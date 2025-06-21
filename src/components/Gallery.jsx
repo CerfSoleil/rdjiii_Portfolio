@@ -11,7 +11,7 @@ const Gallery = ({ title, images }) => {
 
   const openImagePreview = (index) => {
     setSelectedIndex(index);
-    setSlideDirection(""); // no animation on first open
+    setSlideDirection("");
   };
 
   const closeImagePreview = () => {

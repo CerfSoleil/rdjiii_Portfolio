@@ -1,5 +1,5 @@
 // CodingGallery.jsx
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../styles/CodingGallery.css";
 
 const CodingGallery = ({ images, video }) => {
@@ -17,10 +17,16 @@ const CodingGallery = ({ images, video }) => {
     setCurrent((prev) => (prev - 1 + modalContent.length) % modalContent.length);
   };
 
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const openModal = () => {
+    setModalOpen(true);
+    window.modalIsOpen = true;
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+    window.modalIsOpen = false;
+  };
 
-// Touch swipe functionality
+  // Touch swipe functionality
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
   const minSwipeDistance = 50;
@@ -38,9 +44,34 @@ const CodingGallery = ({ images, video }) => {
     if (!touchStartX.current || !touchEndX.current) return;
     const distance = touchEndX.current - touchStartX.current;
 
-    if(distance > minSwipeDistance) next(); // Swipe right
-    else if(distance < -minSwipeDistance) prev(); // Swipe left
+    if (distance > minSwipeDistance) next();
+    else if (distance < -minSwipeDistance) prev();
   };
+
+  // Arrow key navigation
+  useEffect(() => {
+    if (!modalOpen) return;
+  
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        next();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        prev();
+      } else if (e.key === "Escape") {
+        e.preventDefault();
+        closeModal();
+      }
+    };
+  
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [modalOpen]);
+
+  const isVideoModal = (index) => video && index === 0;
+  const isVideoPreview = (index) => video && index === previewContent.length - 1;
+
 
   return (
     <>

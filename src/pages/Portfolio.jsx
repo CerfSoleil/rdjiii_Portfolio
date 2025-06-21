@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"; // ⬅️ add useEffect
+import React, { useState, useRef, useEffect } from "react";
 import "../styles/Portfolio.css";
 import CodingPortfolio from "./CodingPortfolio";
 import PhotographyPortfolio from "./PhotographyPortfolio";
@@ -27,6 +27,7 @@ const Portfolio = () => {
   };
 
   const onTouchEnd = () => {
+    if (window.modalIsOpen) return;
     if (!touchStartX.current || !touchEndX.current) return;
     const distance = touchStartX.current - touchEndX.current;
 
@@ -39,6 +40,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
+      if (window.modalIsOpen) return;
       if (e.key === "ArrowRight" && activeTab === "coding") {
         e.preventDefault();
         switchTab("photography", "left");
@@ -49,7 +51,7 @@ const Portfolio = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeTab]); // activeTab ensures effect updates when tab changes
+  }, [activeTab]);
 
   return (
     <div className="portfolio">
