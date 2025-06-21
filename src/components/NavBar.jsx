@@ -5,19 +5,22 @@ import "../styles/NavBar.css";
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <NavLink to="/" className="nav-link" activeClassName="active-link">
-        About Me
-      </NavLink>
-      <NavLink to="/portfolio" className="nav-link" activeClassName="active-link">
-        Portfolio
-      </NavLink>
-      <NavLink to="/contact" className="nav-link" activeClassName="active-link">
-        Contact
-      </NavLink>
-      <NavLink to="/resume" className="nav-link" activeClassName="active-link">
-        Resume
-      </NavLink>
-    </nav>
+  <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>
+    About Me
+  </NavLink>
+
+  <NavLink to="/portfolio" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>
+    Portfolio
+  </NavLink>
+
+  <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>
+    Contact
+  </NavLink>
+
+  <NavLink to="/resume" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>
+    Resume
+  </NavLink>
+</nav>
   );
 };
 

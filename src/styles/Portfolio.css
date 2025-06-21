@@ -33,6 +33,15 @@
     position: relative;
     overflow: hidden;
     height: 100%;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+  }
+
+  .slide-left {
+    animation-name: slide-in-left;
+  }
+  .slide-right {
+    animation-name: slide-in-right;
   }
   
   .portfolio-content.coding {
@@ -46,17 +55,21 @@
   @keyframes slide-in-left {
     from {
       transform: translateX(100%);
+      opacity: 0.2;
     }
     to {
-      transform: translateX(0);
+      transform: translateX(0%);
+      opacity: 1;
     }
   }
   
   @keyframes slide-in-right {
     from {
       transform: translateX(-100%);
+      opacity: 0.2;
     }
     to {
-      transform: translateX(0);
+      transform: translateX(0%);
+      opacity: 1;
     }
   }  

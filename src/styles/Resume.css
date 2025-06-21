@@ -11,6 +11,10 @@
   hr {
     margin-top: 10px;
   }
+
+  .skills-list {
+    list-style-type: none;
+  }
   
   .resume-download {
     display: inline-block;

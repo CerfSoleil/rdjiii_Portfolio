@@ -8,17 +8,18 @@
   .nav-link {
     margin: 0 15px;
     text-decoration: none;
-    color: white;
+    color: #888;
     font-weight: bold;
     transition: color 0.3s;
   }
   
   .nav-link:hover {
-    color: #f0f0f0;
+    color: #A54B33;
   }
   
   .active-link {
     border-bottom: 2px solid white;
+    color: white;
   }
   
   .floating-gallery-bar {
