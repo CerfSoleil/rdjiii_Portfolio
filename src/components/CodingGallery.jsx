@@ -1,5 +1,5 @@
 // CodingGallery.jsx
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/CodingGallery.css";
 
 const CodingGallery = ({ images, video }) => {
@@ -15,12 +15,40 @@ const CodingGallery = ({ images, video }) => {
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
 
+// Touch swipe functionality
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    touchEndX.current = null;
+    touchStartX.current = e.changedTouches[0].clientX;
+  };
+
+  const onTouchMove = (e) => {
+    touchEndX.current = e.changedTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchEndX.current - touchStartX.current;
+
+    if(distance > minSwipeDistance) next(); // Swipe right
+    else if(distance < -minSwipeDistance) prev(); // Swipe left
+  };
+
   return (
     <>
       <div className="gallery-preview">
         <button onClick={prev}>&lt;</button>
 
-        <div onClick={openModal}>
+        <div
+          onClick={openModal}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+          style={{ flex: 1 }}
+        >
           {isVideo(current) ? (
             <video src={video} width="300" controls muted />
           ) : (
@@ -42,11 +70,17 @@ const CodingGallery = ({ images, video }) => {
           <span className="close" onClick={closeModal}>×</span>
           <button className="modal-nav left" onClick={prev}>&lt;</button>
 
-          {isVideo(current) ? (
-            <video src={video} className="modal-video" controls autoPlay />
-          ) : (
-            <img src={content[current]} alt={`Modal ${current}`} className="modal-img" />
-          )}
+          <div
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
+            {isVideo(current) ? (
+              <video src={video} className="modal-video" controls autoPlay />
+            ) : (
+              <img src={content[current]} alt={`Modal ${current}`} className="modal-img" />
+            )}
+          </div>
 
           <button className="modal-nav right" onClick={next}>&gt;</button>
 
@@ -64,5 +98,6 @@ const CodingGallery = ({ images, video }) => {
     </>
   );
 };
+
 
 export default CodingGallery;
