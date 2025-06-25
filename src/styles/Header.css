@@ -30,8 +30,3 @@
     z-index: 10;
     -webkit-text-stroke: 1px white;
   }
-  
-  .header-title:hover {
-    color: rgb(66, 171, 231);
-  }
-  

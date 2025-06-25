@@ -15,7 +15,7 @@ export const repositories = [
         softwareUsed: "GraphQL, MongoDB, TypeScript, React",
         activeDev: false,
         repo: "https://github.com/nolangrossi/Wordemon",
-        deploy: "",
+        deploy: "https://wordmon.onrender.com/",
         video: "../videos/wordemon_showcase.mp4",
         images: ["../images/coding_galleries/Wordemon/Wordemon_1.png","../images/coding_galleries/Wordemon/Wordemon_2.png","../images/coding_galleries/Wordemon/Wordemon_3.png"] 
     },
