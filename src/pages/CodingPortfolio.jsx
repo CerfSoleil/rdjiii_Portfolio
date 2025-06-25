@@ -12,6 +12,7 @@ const CodingPortfolio = () => {
         <div key={index} className="coding-tile">
           <CodingGallery images={repo.images} video={repo.video} />
           <h3>{repo.title}</h3>
+          <p className="software-used">{repo.softwareUsed}</p>
           <p className="repo-descript">{repo.description}</p>
           <p>Currently Worked On: {repo.activeDev ? "Yes" : "No"}</p>
           <div className="coding-links">

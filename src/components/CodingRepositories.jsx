@@ -1,7 +1,8 @@
 export const repositories = [
     { 
         title: "AutoScout Car Dealership", 
-        description: "A mockup website emulating a used car dealership's page. Includes functionality for customers and employees", 
+        description: "A mockup website emulating a used car dealership's page. Includes functionality for customers to search available cars and employees to manage inventory.", 
+        softwareUsed: "bcrypt, Express, JWT, Node.js, PostgreSQL, React, Sequelize, Vite",
         activeDev: false,
         repo: "https://github.com/andrewPelfrey/used-car-dealer" ,
         deploy: "",
@@ -10,7 +11,8 @@ export const repositories = [
     },
     { 
         title: "WordéMon", 
-        description: "An interactive PokéMon fan project.",
+        description: "An daily play Pokémon-themed word game built using full-stack MERN application.",
+        softwareUsed: "GraphQL, MongoDB, TypeScript, React",
         activeDev: false,
         repo: "https://github.com/nolangrossi/Wordemon",
         deploy: "",

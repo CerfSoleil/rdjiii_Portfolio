@@ -17,6 +17,11 @@
     transition: box-shadow 0.3s, border-color 0.3s;
     border: 2px solid #A54B33;
   }
+
+  .software-used {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
   
   .coding-tile:hover {
     border-color: #333;
