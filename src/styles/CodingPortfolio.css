@@ -6,7 +6,7 @@
   }
   
   .coding-tile {
-    width: 300px;
+    width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -16,6 +16,14 @@
     background-color: #f9f9f9;
     transition: box-shadow 0.3s, border-color 0.3s;
     border: 2px solid #A54B33;
+  }
+
+  ul {
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
   }
 
   .software-used {

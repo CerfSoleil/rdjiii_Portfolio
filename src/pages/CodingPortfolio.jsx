@@ -13,7 +13,12 @@ const CodingPortfolio = () => {
           <CodingGallery images={repo.images} video={repo.video} />
           <h3>{repo.title}</h3>
           <p className="software-used">{repo.softwareUsed}</p>
-          <p className="repo-descript">{repo.description}</p>
+          {repo?.description && <p className="repo-descript">{repo.description}</p>}
+          <ul>
+            {repo?.details?.map((detail, i) => (
+              <li key={i}>{detail}</li>
+            ))}
+          </ul>
           <p>Currently Worked On: {repo.activeDev ? "Yes" : "No"}</p>
           <div className="coding-links">
             <a href={repo.repo} target="_blank" rel="noopener noreferrer">Repository</a>
