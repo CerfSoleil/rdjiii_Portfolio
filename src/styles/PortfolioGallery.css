@@ -183,3 +183,10 @@
 .slide-right {
   animation: slide-in-right 0.3s ease-out;
 }
+
+/* Phone Formatting */
+@media (max-width: 767px) {
+  .preview-arrow {
+    display: none;
+  }
+}
