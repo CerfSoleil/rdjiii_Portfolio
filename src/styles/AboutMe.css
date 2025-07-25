@@ -9,3 +9,9 @@
     line-height: 1.6;
   }
   
+  /* This page likely needs mobile formatting, but I cannot preview the problem currently.*/
+  /* @media (max-width: 767px) {
+  .about-me p {
+    display: none;
+  }
+  } */
