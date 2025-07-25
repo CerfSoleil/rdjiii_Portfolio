@@ -11,3 +11,9 @@
     margin-right: 10rem;
   }
   
+  /* This page likely needs mobile formatting, but I cannot preview the problem currently.*/
+  /* @media (max-width: 767px) {
+  .about-me p {
+    display: none;
+  }
+  } */

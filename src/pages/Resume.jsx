@@ -15,8 +15,8 @@ const Resume = () => {
       </ul>
       <hr />
       <a
-        href="/placeholder-resume.pdf"
-        download="Resume.pdf"
+        href="/Resume.pdf"
+        download="RDJiii-Resume.pdf"
         className="resume-download"
       >
         Download My Resume
