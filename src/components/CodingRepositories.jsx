@@ -3,7 +3,7 @@ export const repositories = [
         title: "City Map",
         description: "An interactive, diplomacy-style map of a fictional city. Includes functionality to preview sections of the city in segments.",
         activeDev: true,
-        repo: "",
+        repo: "https://github.com/CerfSoleil/FantasyWorld",
         deploy: "",
         video: "",
         images: ["../images/coding_galleries/WorldWebsite/city-map-preview.png"]
